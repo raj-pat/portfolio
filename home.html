@@ -9,6 +9,11 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script>
+            var shiftWindow = function() { scrollBy(0, -60) };
+            if (location.hash) shiftWindow();
+            window.addEventListener("hashchange", shiftWindow);
+        </script>
     </head>
     <body style=" background-color:rgb(38, 61, 80);" >
             <nav class="navbar navbar-expand bg-dark navbar-dark fixed-top p-1">
@@ -20,16 +25,16 @@
             
                 <ul class = "navbar-nav justify-content-end ml-auto" >
                         <li class="nav-item" >
-                            <a class="nav-link" href="#" style="font-size: 15pt;">About me</a>
+                            <a class="nav-link" href="#aboutme" style="font-size: 15pt;">About me</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"style="font-size: 15pt;">Education</a>
+                            <a class="nav-link" href="#edu"style="font-size: 15pt;">Education</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"style="font-size: 15pt;">Experience</a>
+                            <a class="nav-link" href="#exp"style="font-size: 15pt;">Experience</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"style="font-size: 15pt;">Projects</a>
+                            <a class="nav-link" href="#proj"style="font-size: 15pt;">Projects</a>
                         </li>
                 </ul>
             </nav>
@@ -54,7 +59,8 @@
                 </div>
             </div>
         <!-- This div is for the content   -->
-        <div style="padding: 5px;">
+        
+        <div id="aboutme" style="padding: 5px;">
             <div style=" color: aliceblue;">
                         <h4 style="background-color: rgb(54, 80, 99); padding-left: 5px;">About me</h4>
             </div>
@@ -67,7 +73,7 @@
                     </h6>
             </div>
             </div>
-        <div style="padding: 5px;">
+        <div id="skills" style="padding: 5px;">
             <div style=" color: aliceblue;">
                         <h4 style="background-color: rgb(54, 80, 99); padding-left: 5px;">Skills</h4>
             </div>
@@ -98,7 +104,7 @@
                     </h6>
             </div>
             </div>
-            <div style="padding: 5px;">
+            <div id="edu" style="padding: 5px;">
             <div style=" color: aliceblue;">
                         <h4 style="background-color: rgb(54, 80, 99); padding-left: 5px;">Education</h4>
             </div>
@@ -120,7 +126,7 @@
                 </h6>
             </div></div> 
 
-            <div style="padding: 5px;">
+            <div id="exp" style="padding: 5px;">
             <div style=" color: aliceblue;">
                         <h4 style="background-color: rgb(54, 80, 99); padding-left: 5px;">Experience</h4>
             </div>
@@ -152,14 +158,13 @@
                 
             </h6>
             </div></div> 
-            <div style="padding: 5px;">
+            <div id="proj" style="padding: 5px;">
             <div style=" color: aliceblue;">
                 <h4 style="background-color: rgb(54, 80, 99); padding-left: 5px;">Projects</h4>
             </div>
             <div style="padding-left: 5px;">
                 <h6>
                     <ul style="padding-left: 15px;">
-                        <li>This portfolio of mine you're currently looking at.</li>
                         <li>Develop a website to serve as a marketplace for the university using Django and SQLite.</li>
                         <li>Develop a website to send a text using HTML, JavaScript, Lambda, S3, SNS, and API Gateway.</li>
                         <li>Write an assembler for SIC/XE language and a compiler for C-minus language using python.</li>
